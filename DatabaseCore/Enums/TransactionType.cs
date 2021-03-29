@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace BillingSystemTest.Common.DTO
+namespace DatabaseCore.Enums
 {
-    public class BalanceInfoDTO
+    public enum TransactionType
     {
-        public decimal Balance { get; set; }
+        Debt,
+        Income
     }
 }

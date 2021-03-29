@@ -18,6 +18,6 @@ namespace DatabaseCore.Models
         public UserModel User { get; set; }
 
         public decimal Debet { get; set; }
-        public decimal Credet { get; set; }
+        public decimal Credit { get; set; }
     }
 }

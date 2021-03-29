@@ -14,8 +14,6 @@ namespace DatabaseCore
         {
             Database.EnsureCreated();
 
-            //ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
-
 
             #region create test data
 

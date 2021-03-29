@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 
@@ -24,22 +25,22 @@ namespace BillingSystemTest.Controllers
         }
 
 
-        [HttpGet("{id}")]
-        public async Task<BalanceInfoDTO> Get(int id)
+        [HttpPost("balance")]
+        public async Task<BalanceInfoDTO> Post([FromBody] BalanceRequestModel model)
         {
-            return await _accountService.GetBalance(id);
+            return await _accountService.GetBalance(model);
         }
 
         [HttpPost("history")]
-        public async Task<List<TransactionDTO>> Post([FromBody]HistoryRequestModel model)
+        public async Task<List<TransactionDTO>> Post([FromBody] HistoryRequestModel model)
         {
             return await _accountService.GetHistory(model);
         }
 
         [HttpPost("statistic")]
-        public async Task<List<TransactionDTO>> Post([FromBody] StatisticRequestModel model)
+        public async Task<List<UserStatisticDTO>> Post([FromBody] StatisticRequestModel model)
         {
-           
+            return await _accountService.GetStatistics(model);
         }
 
         [HttpPut("add")]

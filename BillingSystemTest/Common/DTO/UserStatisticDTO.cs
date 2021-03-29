@@ -9,6 +9,7 @@ namespace BillingSystemTest.Common.DTO
     {
         public int UserID { get; set; }
         public decimal Debet { get; set; }
-        public decimal Credet { get; set; }
+        public decimal Credit { get; set; }
+        public DateTime Day { get; set; }
     }
 }
